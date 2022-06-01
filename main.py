@@ -15,7 +15,7 @@ def gameplay():
     # list of available options
     options = ["R", "P", "S"]
 
-    # prompt player to enter their choice
+    # prompt gamer to enter their choice
     # if user types R or P or S, the program will continue
     # if user types an invalid option, the program will prompt the user to enter a valid option
     gamer = input("Enter your choice: ")
@@ -23,9 +23,9 @@ def gameplay():
         gamer = input("Please enter a valid response: ")
 
 
-    # if player types in R, the player chooses rock
-    # if player types in P, the player chooses paper
-    # if player types in S, the player chooses scissor    
+    # if gamer types in R, the gamer chooses rock
+    # if gamer types in P, the gamer chooses paper
+    # if gamer types in S, the gamer chooses scissor    
     if gamer == "R":
         gamer = "Rock"
     elif gamer == "P":
@@ -50,30 +50,30 @@ def gameplay():
     print(f"\nGamer ({gamer}) : CPU ({cpu})")
 
 
-    # if both player and computer choose the same option, it is a tie
-    # The game would restart until one of the players wins
+    # if both gamer and computer choose the same option, it is a tie
+    # The game would restart until one of the gamers wins
     if gamer == cpu:
         print("It's a tie! You have to try again!")
         gameplay()
 
-    # if player chooses rock and computer chooses paper, player wins
-    # if player chooses rock and computer chooses scissors, player loses
+    # if gamer chooses rock and computer chooses paper, gamer wins
+    # if gamer chooses rock and computer chooses scissors, gamer loses
     elif gamer == "Rock":
         if cpu == "Scissors":
             print(f"Rock smashes scissors! Gamer({gamer}) wins!\n")
         else:
             print(f"Paper covers rock! CPU({cpu}) wins!\n")
 
-    # if gamer chooses paper and computer chooses rock, player wins
-    # if gamer chooses paper and computer chooses scissors, player loses
+    # if gamer chooses paper and computer chooses rock, gamer wins
+    # if gamer chooses paper and computer chooses scissors, gamer loses
     elif gamer == "Paper":
         if cpu == "Rock":
             print(f"Paper covers rock! Gamer({gamer}) wins!\n")
         else:
             print(f"Scissors cuts paper! CPU{(cpu)} wins!\n")
 
-    # if player chooses scissors and computer chooses rock, player loses
-    # if player chooses scissors and computer chooses paper, player wins
+    # if gamer chooses scissors and computer chooses rock, gamer loses
+    # if gamer chooses scissors and computer chooses paper, gamer wins
     elif cpu == "Paper":
         print(f"Scissors cuts paper! Gamer({gamer}) wins!\n")
     else:
